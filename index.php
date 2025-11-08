@@ -1,13 +1,12 @@
 <?php
-// index.php
 
-require_once 'class/Author.php';
-require_once 'class/Manga.php';
-require_once 'class/Chapter.php';
+require_once 'class/Author.php';//membutuhkan file class Author.php
+require_once 'class/Manga.php';//membutuhkan file class Manga.php
+require_once 'class/Chapter.php';//membutuhkan file class Chapter.php
 
-$author = new Author();
-$manga = new Manga();
-$chapter = new Chapter();
+$author = new Author();//membuat instance dari class Author
+$manga = new Manga();//membuat instance dari class Manga
+$chapter = new Chapter();//membuat instance dari class Chapter
 
 // Tentukan halaman yang akan dimuat (default: home)
 $page = $_GET['page'] ?? 'home';
@@ -24,8 +23,9 @@ $page = $_GET['page'] ?? 'home';
 </head>
 
 <body>
-
+  <!-- include file header.php yang ada di folder view -->
   <?php include 'view/header.php'; ?>
+
 
   <main>
     <?php
@@ -50,7 +50,7 @@ $page = $_GET['page'] ?? 'home';
   </main>
 
   <?php include 'view/footer.php'; ?>
-
+  <!-- include file footer.php yang ada di folder view -->
 </body>
 
 </html>
