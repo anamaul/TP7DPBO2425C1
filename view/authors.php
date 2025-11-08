@@ -91,17 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_author'])) {
 if (isset($_GET['action']) && $_GET['action'] === 'edit' && isset($_GET['id'])) {
   $author_id_to_edit = (int) $_GET['id'];
 
-  // Asumsi Anda perlu menambahkan fungsi getAuthorById() ke Author.php,
-  // tapi untuk sementara kita ambil semua data dan cari ID-nya di sini.
-  $author_data_to_edit = null;
-  $all_authors = $author->getAllAuthors();
-
-  foreach ($all_authors as $a_row) {
-    if ($a_row['author_id'] == $author_id_to_edit) {
-      $author_data_to_edit = $a_row;
-      break;
-    }
-  }
+  $author_data_to_edit = $author->getAuthorById($author_id_to_edit);
 
   if ($author_data_to_edit):
     ?>
@@ -120,7 +110,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'edit' && isset($_GET['id'])) 
       <a href="index.php?page=authors" style="margin-left: 10px;">Batal Edit</a>
     </form>
     <hr>
-  <?php
+    <?php
   endif;
 }
 

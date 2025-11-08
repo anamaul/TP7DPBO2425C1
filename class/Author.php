@@ -33,4 +33,11 @@ class Author//membuat class Author
     $stmt = $this->db->prepare("DELETE FROM author WHERE author_id = ?");//mempersiapkan query untuk menghapus data dari tabel author berdasarkan author_id
     return $stmt->execute([$author_id]);//menjalankan query dengan parameter author_id
   }
+
+  public function getAuthorById($author_id)
+  {
+    $stmt = $this->db->prepare("SELECT * FROM author WHERE author_id = ?");
+    $stmt->execute([$author_id]);
+    return $stmt->fetch(PDO::FETCH_ASSOC); // Mengambil satu baris data author
+  }
 }
