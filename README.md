@@ -8,6 +8,10 @@ saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
 Proyek ini adalah implementasi sederhana dari aplikasi CRUD (Create, Read, Update, Delete) untuk mengelola database Manga. Aplikasi ini dibangun menggunakan bahasa pemrograman PHP dengan koneksi database MySQL/MariaDB melalui ekstensi PDO.<br>
 Proyek ini menerapkan konsep Object-Oriented Programming (OOP) dengan memisahkan logika database ke dalam Class terpisah (Author.php, Manga.php, Chapter.php).<br>
 
+<h2>🖼️ Design Database</h2>
+
+<img width="855" height="266" alt="image" src="https://github.com/user-attachments/assets/26952463-8002-498f-9dc7-c1840f9d22bb" />
+
 <h2>🛠️ Persyaratan Sistem</h2>
 
 * Web Server: Apache atau Nginx<br>
