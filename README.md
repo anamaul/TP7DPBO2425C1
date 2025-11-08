@@ -100,7 +100,6 @@ Aplikasi ini menggunakan struktur MVC (Model-View-Controller) yang ringan:
     <strong>Manga:</strong>
     <ul>
       <li>Menambah, melihat, mengedit, dan menghapus data Manga (Judul, Genre, Tahun, Author).</li>
-      <li>Form edit telah diperbaiki agar tidak bergantung pada keberadaan data Chapter.</li>
     </ul>
   </li>
   <li>
